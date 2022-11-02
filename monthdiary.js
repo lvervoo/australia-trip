@@ -77,7 +77,7 @@ window.onclick = function(event) {
 
 //Récupérer le fichier json avec les infos pour chaque mois et les convertis en données javascripts
 async function getjsonMonthcarrousel() { 
-  let url = '/jsonfiles/sectionmonth.json';
+  let url = 'https://lvervoo.github.io/australia-trip/jsonfiles/sectionmonth.json';
   try {
       let res = await fetch(url);
       return await res.json();
