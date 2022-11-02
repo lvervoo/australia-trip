@@ -1,0 +1,1207 @@
+/* --------------------------------------- */
+/* ----- Basic Setup ----- */
+/* --------------------------------------- */
+
+
+@font-face {
+    font-family: 'Hk Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/HKGrotesk-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Jost-Regular.ttf') format('ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; 
+}
+
+:root {
+    --font-size-small: 1.8rem;
+    --font-size-normal: 2.2rem;
+    --font-size-medium: 2.8rem;
+    --font-size-medium-1: 3.6rem;
+    --font-size-large: 5.5rem;
+    --font-size-huge: 7.5rem;
+    --font-stack: 'Hk Grotesk', sans-serif;
+
+    --line-height-normal: 1.7;
+    --line-height-small: 1.2;
+
+    --black: #000;
+    --austrayel: #C38C01;
+    --white: #f0e9f2;
+    --white-1: #e5e5e6da;
+    --grey:#484848;
+    --grey-1:#cbcbcb;
+    --grey-2:#626262;
+
+
+    --container-max-width: 1180px;
+    --container-normal-width: 800px;
+    --container-medium-width: 700px; 
+    --container-small-width: 500px;
+
+    --gutter-huge: 12rem;
+    --gutter-medium: 6rem;
+    --gutter-normal: 3rem;
+    --gutter-small-1: 2.5rem;
+    --gutter-small: 2rem;
+
+    --border-light: 1px solid rgb(36, 35, 35);
+}
+
+html {
+    font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@media(max-width: 1000px) {
+    html {
+        font-size: 52%;
+    }
+}
+
+body {
+    font-size: var(--font-size-small);
+    font-family: var(--font-stack);
+    font-weight: 400;
+    color: var(--white-1);
+    line-height: var(--line-height-normal);
+    background: var(--black);
+    overflow-x: hidden;
+}
+
+.row {
+    padding: 0 var(--gutter-medium);
+    margin: 0 auto;
+}
+
+@media(max-width: 1340px) {
+    .row {
+        padding: 0 var(--gutter-normal);
+        
+    }
+}
+
+@media(max-width: 1240px) {
+    .row {
+        padding: 0 var(--gutter-normal);
+    }
+}
+
+@media(max-width: 600px) {
+    .row {
+        padding: 0 var(--gutter-normal);
+    }
+}
+
+@media(max-width: 600px) {
+    .row {
+        padding: 0 var(--gutter-small);
+    }
+}
+
+section {
+    padding: var(--gutter-medium) 0;
+    border-bottom: var(--border-light);
+}
+
+img {
+    object-fit: contain;
+    max-width: 100%;
+}
+
+/* --------------------------------------- */
+/* ----- Headlines and Paragraphs ----- */
+/* --------------------------------------- */
+
+h1,
+h2,
+h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    line-height: var(--line-height-small);
+    color: var(--white);
+}
+
+.heading-primary {
+    line-height: 1;
+    font-size: var(--font-size-huge);
+    font-weight: 400;
+}
+
+@media(max-width: 900px) {
+    .heading-primary {
+        font-size: 6.5rem;
+    }
+}
+
+h2 {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--gutter-small);
+}
+
+h2::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 10rem;
+    background: var(--white);
+    margin: var(--gutter-small) 0;
+}
+
+h3 {
+    font-size: var(--font-size-medium-1);
+    margin-bottom: var(--gutter-small);
+}
+
+@media(max-width: 700px) {
+    .heading-primary {
+        font-size: var(--font-size-large);
+    }
+
+    h2 {
+        font-size: var(--font-size-medium-1);
+        margin-bottom: var(--gutter-small);
+    }
+
+    h3 {
+        font-size: var(--font-size-medium);
+    }
+
+    
+}
+
+p {
+    margin-bottom: var(--gutter-small-1) ; /* -------Margin au et bas--------- */
+    text-align: justify;
+}
+
+
+
+
+
+/* --------------------------------------- */
+/* ----- Buttons and Links ----- */
+/* --------------------------------------- */
+
+a {
+    color: var(--white);
+    font-weight: 400;
+    font-family: 'Jost', sans-serif;
+    transition: all .2s;
+    outline: 2px solid transparent;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
+
+button:focus,
+a:focus {
+    outline: 2px solid var(--austrayel);
+}
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) a:focus {
+    outline: none;
+}
+
+.link:hover {
+    color: var(--white);
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4.2rem;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid  var(--austrayel);
+    font-weight: 400;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    background: var(--white);
+    height: 100%;
+    z-index: -1;
+    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+
+.btn:hover::after,
+.btn:focus::after {
+    right: 0;
+    background: var(--austrayel);
+}
+
+.btn--austrayel {
+    background: var(--austrayel);
+    transition: all 0.2s;
+}
+
+.btn--austrayel::after {
+    display: none;
+}
+
+.btn--austrayel:hover,
+.btn--austrayel:focus {
+    background: transparent;
+}
+
+.link__text {
+    position: relative;
+    display: inline-block;
+    padding: .6rem;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--white);
+}
+
+.link__text::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    background: var(--white);
+    height: 100%;
+    z-index: -1;
+    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+
+.link__text:focus {
+    outline: none;
+}
+
+.link__text:hover::after,
+.link__text:focus:after {
+    right: 0;
+    background: var(--white);
+}
+
+.link__text span {
+    padding-left: 1rem;
+    font-family: sans-serif;
+}
+
+/* ----- Back to Top ----- */
+
+.back-to-top {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.5rem;
+    width: 5.5rem;
+    background-color: var(--white);
+    border-radius: 50%;
+    z-index: 10;
+    visibility: hidden;
+    transition: all .4s;
+}
+
+.back-to-top__image {
+    height: 70%;
+}
+
+@media(max-width: 900px) {
+    .back-to-top {
+        right: 2rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .back-to-top {
+        right: 1rem;
+    }
+}
+
+/* --------------------------------------- */
+/* ----- Navigation ----- */
+/* --------------------------------------- */
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    padding: var(--gutter-normal) 0;
+}
+
+.nav__items {
+    display: flex;
+    list-style: none;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: var(--gutter-medium);
+}
+
+@media(max-width: 500px) {
+    .nav {
+        justify-content: flex-end;
+    }
+}
+
+@media(max-width: 400px) {
+    .nav__item:not(:last-child) {
+        margin-right: var(--gutter-normal);
+    }
+}
+
+@media(max-width: 300px) {
+    .nav {
+        font-size: var(--font-size-small);
+    }
+}
+
+.nav__link {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: inherit;
+    transition: all .2s;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    display: inline-block;
+    height: 1rem;
+    background: var(--white);
+    transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+
+.nav__link:hover {
+    color: var(--austrayel);
+}
+
+.nav__link:hover::after {
+    right: 0;
+    height: 2px;
+    background: var(--austrayel);
+}
+
+
+
+
+/* --------------------------------------- */
+/* ----- Header ----- */
+/* --------------------------------------- */
+
+.header {
+    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
+        url('./images/Australie-fondecranpng.PNG');
+    height: 100vh;
+    background-size: cover;
+    background-position: 35% 30%;
+    background-attachment: fixed;
+    font-size: var(--font-size-normal);
+}
+
+.header__text {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.header__text p {
+    margin: 1.5rem 0 3.5rem;
+    max-width: var(--container-medium-width);
+    font-family: 'Jost', sans-serif;
+    font-size: var(--font-size-medium);
+}
+
+@media(max-width: 500px) {
+    .header {
+        text-align: center;
+    }
+
+    .header__text p {
+        transform: scale(.8);
+    }
+}
+
+
+
+
+
+/* --------------------------------------- */
+/* ----- About ----- */
+/* --------------------------------------- */
+
+#about{
+    background: var(--austrayel);
+}
+
+.about__content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;    
+}
+
+.about__text {
+    margin: 0% 1%;
+    width: 48%;
+}
+
+.about__photo-container {
+    margin: 0% 1%;
+    width: 48%;
+}
+
+.about__photo {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+
+
+
+@media(max-width: 1200px) {
+    .about__content {
+        flex-direction: column-reverse; 
+    }
+    
+    .about__text {
+        width: 95%;
+    }
+    
+    .about__photo-container {
+        width: 95%;
+    }
+    
+    .about__photo {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+/* --------------------------------------------Section 2 : Monthly Diary ---------------------------------------------------------------------  */
+
+
+* {box-sizing:border-box}
+
+
+#MontlyDiary{
+    background: var(--black);
+}
+
+.Diary-title{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+   
+}
+
+#MonthTitle{
+    margin-left: 0%;
+    margin-right: 0% ;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: var(--austrayel);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: var(--austrayel);
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+
+
+/* End Dropdown Button */
+
+
+.diary__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+
+
+.diary-slideshow-container {
+    margin-bottom: var(--gutter-normal);
+}
+
+.diary__text {
+    flex: 0 0 50%;
+    margin: 0% 2%;
+    text-align: justify;
+
+}
+
+@media(max-width: 901px) {
+
+    .diary__content {
+        flex-direction: column;
+        align-items: initial;
+        align-items: flex-start;
+    }
+
+    .diary-slideshow-container {
+        flex: 1;
+        margin: 0 var(--gutter-huge) 0 0;
+    }
+}
+
+
+.imagecarrousel{
+    aspect-ratio: 16/9;
+}
+
+
+/*---------- Slideshow container  carrousel--*/
+.diary-slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* --------------------------------------- */
+/* ----- Interview ----- */
+/* --------------------------------------- */
+
+#Interview{
+    background: var(--austrayel);
+}
+
+.Interview__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+
+ /* ----- Description audio ----- */
+
+ .Interview__text
+ {
+  display: flex;
+  box-sizing: border-box;
+  overflow-y: auto;
+  width: 92%;
+  max-width: 700px;
+  height: 210px;
+  margin: 1% 4%;   /* ----- Permet d'avoir le 100%----- */
+  padding: 2%;
+  border-radius: 10px;
+  background: var(--grey);
+
+ }
+
+ #btnHideshowDescription{
+    float: right;
+    padding: 6px 10px;
+    border:none;
+    background-color: #C38C01;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+ #btnHideshowDescription{
+    background-color: #C38C01;
+ }
+
+ .Playerchangetime 
+  {
+     text-decoration: none;
+     color: blue;
+     cursor: pointer;
+     font-weight: bold;
+  }
+  
+.Playerchangetime:hover /* Apparence au survol des liens */
+  {
+     text-decoration: underline;
+}
+
+ /* ----- Lecteur audio ----- */
+
+
+
+/* (A) MATERIAL ICONS */
+.material-icons {
+    font-size: 28px;
+    color: var(--austrayel);
+  }
+  
+  .material-symbols-outlined {
+    font-size: 28px;
+    color: var(--austrayel);
+    
+  }
+  
+  /* (B) WRAPPER */
+  #aWrap {
+    font-family: arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+
+    box-sizing: border-box;
+    max-width: 700px;
+    height: 320px;
+
+    width: 92%;
+    margin: 1% 4%;   /* ----- Permet d'avoir le 100%----- */
+    padding: 2%;
+
+    border-radius: 10px;
+    background: var(--grey);
+
+  }
+  
+  /* (C) PLAY/PAUSE BUTTON */
+  #aPlay {
+    padding: 0;
+    margin: 0;
+    background: 0;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  /* (D) TIME */
+  #aCron {
+    font-size: 14px;
+    color: var(--grey-1);
+    margin: 0 10px;
+  }
+  
+  /* (E) RANGE SLIDERS */
+  /* (E1) HIDE DEFAULT */
+  #aWrap input[type="range"] {
+    box-sizing: border-box;
+    appearance: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 90%;  /* largeur 100% dépend de la box */
+    padding: 0%;
+    margin: 0%;
+    background: 0;
+  }
+  #aWrap input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+  }
+
+  #TimeInterview{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #VolumeInterview{
+    display: flex;
+    width: 100px;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0% 2%;
+    align-items: center;
+  }
+  
+  /* (E2) CUSTOM SLIDER TRACK */
+  #aWrap input[type=range]::-webkit-slider-runnable-track {
+    background: var(--grey-2);
+  }
+  #aWrap input[type=range]::-moz-range-track {
+    background: #626262;
+  }
+  
+  /* (E3) CUSTOM SLIDER BUTTON */
+  #aWrap input[type=range]::-webkit-slider-thumb {
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    border: 0;
+    background: #fff;
+  }
+  #aWrap input[type=range]::-moz-range-thumb {
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    border: 0;
+    background: #fff;
+  }
+  
+  /* (F) VOLUME
+  #aVolIco {
+    margin: 0 10px;
+  }
+   */
+  
+  /* (G) PLAYLIST */
+  #aList {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+  
+    overflow-y: auto;
+  
+    margin: 10px;
+    color: #7e7e7e;
+    background: #323232;
+  }
+  .aRow {
+    cursor: pointer;
+    padding: 10px 0;
+  }
+  .aRow.now {
+    color: #fea;
+  }
+  
+  
+  
+  #aNextauto {
+    padding: 0;
+    margin: 0;
+    background: 0;
+    border: 0;
+    cursor: pointer;
+   
+  }
+  
+  #aNextrandom {
+    padding: 0;
+    margin-left: 5px;
+    background: 0;
+    border: 0;
+    cursor: pointer;
+    
+  }
+  
+  
+  #TextAndAudio{
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    margin: 1% 1%;   /* ----- Permet d'avoir le 100%----- */
+    padding: 2%;
+  }
+
+  /* ----- Commentaires ----- */
+
+  .post-comment
+  {
+    height: auto;
+    max-height: 320px;
+    overflow-y: auto ;
+    border-radius: 6px;
+
+    
+  }
+
+  .comment-session
+  {
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    margin: 1% 1%;   /* ----- Vertical horizontal Permet d'avoir le 100%----- */
+    padding: 1%;
+    
+  }
+
+  
+
+  .comment-box,
+  .post-comment .list
+  {
+    background-color: var(--grey) ;
+    border-radius: 6px;
+    margin: 1%;
+    padding: 2% 0%;
+  }
+
+
+  .post-comment .list .user
+  {
+
+    display: flex;
+    padding: 8px;
+    overflow: hidden;
+
+  }
+
+  .post-comment .list .user img
+  {
+
+    height: 38px;
+    width: 38px;
+    margin-right: 10px;
+  }
+
+  .name
+  {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #C38C01;
+  }
+
+  .post-comment .comment-post
+  {
+    padding: 0 0 15px 58px;
+
+  }
+
+  .comment-box{
+    padding: 10px;
+    overflow: hidden ;
+    height: 210px;
+  }
+
+  .comment-box .user {
+    display: flex;
+    width : min-content;
+  }
+
+  #NameComment{
+    background-color: white;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 5px;
+    resize: inherit;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 0 1px black;
+  }
+
+
+ #MessageComment{
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    margin: 10px 0 ;
+    padding: 10px;
+    resize: inherit;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 0 1px black;
+  }
+
+  .comment-box textarea:focus-visible{
+    box-shadow: inset 0 0 0 1px var(--austrayel);
+    outline: none;
+
+  }
+
+  .comment-submit{
+    float: right;
+    padding: 3px 3px;
+    height: 4px;
+    border:none;
+    background-color: #C38C01;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+
+
+  }
+
+ .comment-submit:hover{
+    background-color: #C38C01;
+ }
+  
+
+
+
+@media(max-width: 920px) {
+    
+    .Interview__content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+   
+    .Interview__text
+    {
+      max-width: 500px;
+    }
+
+    #aWrap {
+        
+        max-width: 500px;
+        
+          
+    
+      }
+      
+  
+    #TextAndAudio{
+      box-sizing: border-box;
+      margin-bottom: 12px;
+      width: 92%;
+      margin: 1% 4%;   /* ----- Permet d'avoir le 100%----- */
+      padding: 2%;
+      
+    }
+    
+}
+
+    
+   
+
+
+
+
+
+
+/* --------------------------------------- */
+/* ----- Gallery ----- */
+/* --------------------------------------- */
+
+
+#Gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Gallery-item {
+  height: 40vh;
+  flex-grow: 1;
+}
+
+.Gallery-item:last-child {
+  /* There's no science in using "10" here. In all my testing, this delivered the best results. */
+  flex-grow: 10;
+}
+
+.Gallery-image {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+
+
+@media (max-aspect-ratio: 1/1) {
+    .Gallery-item  {
+    height: 30vh;
+  }
+}
+
+
+@media (max-height: 480px) {
+    .Gallery-item  {
+    height: 80vh;
+  }
+}
+
+
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    #Gallery-list {
+    flex-direction: row;
+  }
+
+  .Gallery-item {
+    height: auto;
+    width: 100%;
+  }
+  .Gallery-image {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+}
+
+
+
+
+
+
+
+
+/* --------------------------------------- */
+/* ----- Footer ----- */
+/* --------------------------------------- */
+
+.footer {
+    background-color: var(--austrayel);
+    text-align: center;
+    padding: var(--gutter-small) 0 var(--gutter-small);
+}
+
+.footer__social-links {
+    display: flex;
+    justify-content: center;
+    padding: var(--gutter-small) 0;
+    list-style: none;
+}
+
+.footer__social-link-item:not(:last-of-type) {
+    margin-right: var(--gutter-small);
+}
+
+.footer__social-image {
+    height: 4rem;
+}
+
+.footer__github-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__github-buttons iframe {
+    height: 2.5rem;
+    width: 84px;
+    transform: translateY(3px);
+}
+
+@media(max-width: 500px) {
+    .footer {
+        padding: var(--gutter-small) 0;
+    } 
+}
