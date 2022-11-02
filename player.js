@@ -21,7 +21,7 @@ fetch('sectioninterview.json')
 //SIte intéressant pour manipuler les json : http://ti1.free.fr/index.php/javascript-le-fichier-json-lire-ecrire-modifier/
  
 async function getplaylist() {
-    let url = '/jsonfiles/sectioninterview.json';
+    let url = 'https://lvervoo.github.io/australia-trip/jsonfiles/sectioninterview.json';
     try {
         let res = await fetch(url);
         return await res.json();
