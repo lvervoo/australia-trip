@@ -30,12 +30,13 @@ async function getplaylist() {
     }
 }
 
+/*
 
 
 //Cette fonction ne fonctionne pas
 function setplaylist(commentjson, audnow) {
 
-  let url = 'sectioninterview.json';
+  let url = 'https://lvervoo.github.io/australia-trip/jsonfiles/sectioninterview.json';
   try {
     fetch(url, {
       method: "POST",
@@ -48,7 +49,7 @@ function setplaylist(commentjson, audnow) {
   }
 }
 
-  
+ */ 
 
   //il faut ouvrir le fichier html puis cliquer sur f1 ; écrire live serveur , choisir open liver serveur pour que ça marche
   //Le live serveur est super pratique, il permet de voir les modifications en direct sans recharger la page
