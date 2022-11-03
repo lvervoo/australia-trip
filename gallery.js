@@ -20,7 +20,7 @@ function addImagegalerie(srcimage,altimage){
 }
 
 async function getjsonimagesgallery() { 
-    let url = 'https://lvervoo.github.io/australia-trip/jsonfiles/sectiongallery.json';
+    let url = './jsonfiles/sectiongallery.json';
     try {
         let res = await fetch(url);
         return await res.json();
