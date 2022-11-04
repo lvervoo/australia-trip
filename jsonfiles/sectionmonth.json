@@ -2,27 +2,39 @@
     {
     
         
-        "title": "Montly Diary - October",
-        "paragraphe" : "October october qvoji<qvkjgmqb <ldskjbsdk<mgjdsmg l<dkvj<skmdgjgds<kmjgd< <sgjg<dkmjg<<mkgj text ighghghghghggggggggggggggggggg gggggggggggggggggggggggggggggggggggggggggg ggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
-        "nbpicturestot":3,
+        "title": "Le départ ",
+        "paragraphe" : " Après avoir prix quatre avion, je suis enfin arrivé en Australie (en vie).",
+        "nbpicturestot":5,
         "pictures": [
             {
                 "nbpicture":1,
-                "src" : "./images/Australie-fondecranpng.PNG",
-                "alt" :"australia-road",
-                "textpicture":"slkjfz1"            
+                "src" : "./images/Australie/australiapict (2).jpg",
+                "alt" :"avion",
+                "textpicture":"Premier Avion - Direction Milan"            
             },
             {
                 "nbpicture":2,
-                "src" : "./images/cadre.png",
-                "alt" :"cadre",
-                "textpicture":"slkjfz2"
+                "src" : "./images/Australie/australiapict (6).jpg",
+                "alt" :"avion",
+                "textpicture":"Milan -> Doha"            
             },
             {
                 "nbpicture":3,
-                "src" : "https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1568814785/photostream-photos/DSC05466_kwlv0n.jpg",
-                "alt" :"cadre",
-                "textpicture":"slkjfz3"
+                "src" : "./images/Australie/australiapict (7).jpg",
+                "alt" :"Qatar",
+                "textpicture":"Aéroport Qatar"
+            },
+            {
+                "nbpicture":4,
+                "src" : "./images/Australie/australiapict (11).jpg",
+                "alt" :"avion",
+                "textpicture":"Singapour"
+            },
+            {
+                "nbpicture":5,
+                "src" : "./images/Australie/australiapict (16).jpg",
+                "alt" :"Melbourne",
+                "textpicture":"Arrivé à Melbourne"
             }
         ]   
     },
@@ -30,34 +42,84 @@
     {
     
         
-        "title": "Montly Diary - November",
-        "paragraphe" : "November November textbsojghdhbgLKQM>bh<lkmdwh pwdgmowsgiwsigwg wpfoifigomw wdgqhqe hqhpquhqohquhh qpggq",
-        "nbpicturestot":4,
+        "title": "Melbourne",
+        "paragraphe" : "Arrivé à Melbourne, après 3-4 jours à lutter contre le jet lag et à faire des papiers, je sors enfin faire une première visite de Melbourne. La ville est très sympa, avec de nombreux parcs. Le centre ville est très impressionant de loin avec ses buildings, mais une fois qu'on y ait on ne se rend même plus compte qu'on a des batiments immenses à coté de soit. La plage est un peu décevante, c'est plus un port qu'une plage, l'eau est encore moins propre que à dunkerque. Ce que j'ai préféré visité à Melbourne c'est : les parcs très chaleureux, les musées, et les street art qui parcourent la ville",
+        "nbpicturestot":12,
         "pictures": [
             {
                 "nbpicture":1,
-                "src" : "./images/Australie-fondecranpng.PNG",
-                "alt" :"australia-road",
-                "textpicture":"slkz1"            
+                "src" : "./images/Australie/australiapict (18).jpg",
+                "alt" :"Melbourne",
+                "textpicture":""            
             },
             {
                 "nbpicture":2,
-                "src" : "./images/cadre.png",
-                "alt" :"cadre",
-                "textpicture":"sl2"
+                "src" : "./images/Australie/australiapict (20).jpg",
+                "alt" :"Melbourne Street Art",
+                "textpicture":""            
             },
             {
-                "nbpicture":1,
-                "src" : "./images/Australie-fondecranpng.PNG",
-                "alt" :"australia-oad",
-                "textpicture":"31"            
+                "nbpicture":3,
+                "src" : "./images/Australie/australiapict (22).jpg",
+                "alt" :"Melbourne Street Art",
+                "textpicture":""            
             },
             {
-                "nbpicture":2,
-                "src" : "./images/cadre.png",
-                "alt" :"cade",
-                "textpicture":"4"
+                "nbpicture":4,
+                "src" : "./images/Australie/australiapict (29).jpg",
+                "alt" :"Melbourne",
+                "textpicture":""            
+            },
+            {
+                "nbpicture":5,
+                "src" : "./images/Australie/australiapict (31).jpg",
+                "alt" :"Melbourne",
+                "textpicture":""            
+            },
+            {
+                "nbpicture":6,
+                "src" : "./images/Australie/australiapict (32).jpg",
+                "alt" :"Melbourne",
+                "textpicture":""            
+            },
+            {
+                "nbpicture":7,
+                "src" : "./images/Australie/australiapict (38).jpg",
+                "alt" :"Melbourne",
+                "textpicture":""            
+            },
+            {
+                "nbpicture":8,
+                "src" : "./images/Australie/australiapict (41).jpg",
+                "alt" :"Melbourne",
+                "textpicture":""            
+            },
+            {
+                "nbpicture":9,
+                "src" : "./images/Australie/australiapict (45).jpg",
+                "alt" :"Melbourne",
+                "textpicture":""            
+            },
+            {
+                "nbpicture":10,
+                "src" : "./images/Australie/australiapict (48).jpg",
+                "alt" :"Melbourne",
+                "textpicture":""            
+            },
+            {
+                "nbpicture":11,
+                "src" : "./images/Australie/australiapict (50).jpg",
+                "alt" :"Melbourne",
+                "textpicture":""            
+            },
+            {
+                "nbpicture":12,
+                "src" : "./images/Australie/australiapict (57).jpg",
+                "alt" :"Melbourne",
+                "textpicture":""            
             }
+
+
 
         ]   
     }
